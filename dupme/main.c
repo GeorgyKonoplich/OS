@@ -4,7 +4,9 @@
 int main(int argc, char** argv){
 	int input, output, m, error, i;
 	int len = 0;
-	int k = atoi(argv[1]);
+	int k;
+	if (argc == 1) k = 0; else k = atoi(argv[1]);
+	if (k < 0) k = 0;
 	char* buf = (char*) malloc(k + 2);
 	while(1){
 		input = read(0, buf + len, k - len + 1);
@@ -26,7 +28,7 @@ int main(int argc, char** argv){
 			output = write(1, buf + m + 1, i - m);
 			m = i;
 		}
-		if (m == -1){
+		if (m == -1 && len == k + 1){
 			len = 0;
 			error = 1;
 		}else{ 
