@@ -2,9 +2,8 @@
 #include<unistd.h>
 
 int main(int argc, char** argv){
-	int input, output, m, error, i;
+	int k, input, output, m, error, i;
 	int len = 0;
-	int k;
 	if (argc == 1) k = 0; else k = atoi(argv[1]);
 	if (k < 0) k = 0;
 	char* buf = (char*) malloc(k + 2);
@@ -13,7 +12,7 @@ int main(int argc, char** argv){
 		if (input >= 0) len =  len + input;
 		if (input == 0 && len == 0){
 			break;
-		} else if (input == 0){
+		} else if (input == 0 && error == 0){
 			buf[len] = '\n';
 			len = len + 1;
 		}
