@@ -10,7 +10,7 @@ int main(int argc, char* argv[]){
     int length, res, k, input, output, m, error, i;
     char **args;
     int len = 0;
-    char tmp;
+    char tmp = '\n';
     k = 4096;
     while ((res = getopt(argc, argv, "nzb:")) != -1) {
         switch (res) {
