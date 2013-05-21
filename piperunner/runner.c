@@ -6,6 +6,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <deque>
+#include <vector>
 
 void one_run(std::deque <char*> & v){
     char ** command = (char **) malloc((v.size() + 1) * (sizeof(char *)));
