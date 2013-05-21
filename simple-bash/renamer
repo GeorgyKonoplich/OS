@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ "$#" == 0 ]; then
+	echo -e "Usage:\nrenamer \${regexp for files to be ranamed}"
+fi
+
+for filename in "$@"
+do
+    echo -ne $filename'\nNew name: '
+    read new_name
+    if [ -e "$new_name" ]
+	then
+		echo "File with this name just exist. Try again later."
+	else
+		mv "$filename" "$new_name"
+	fi
+done

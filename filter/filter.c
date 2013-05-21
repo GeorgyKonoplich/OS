@@ -7,7 +7,7 @@
 #include <string.h>
 
 int main(int argc, char* argv[]){
-    int length, res, k, input, output, m, error, i;
+    int length, res, k, input, m, i;
     char **args;
     int len = 0;
     char tmp = '\n';
