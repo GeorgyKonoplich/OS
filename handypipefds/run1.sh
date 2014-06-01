@@ -1,0 +1,1 @@
+cat /dev/zero | ./handypipefds 0 1 | (sleep 10;)

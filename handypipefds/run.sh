@@ -1,0 +1,1 @@
+./charbychar 2 2 2 2 | ./handypipefds 0 1 | ./charbychar 2 2 2 2

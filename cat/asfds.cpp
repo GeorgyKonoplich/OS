@@ -61,6 +61,10 @@ int main(int argc, char* argv[]){
 			_exit(EXIT_FAILURE);
 		}
 	}
+	for (int i = 1; i < argc - 1; i++){
+		int fd = atoi(args[i]);
+		close(fd);
+	}
 	free(args);
 	return 0;
 }
